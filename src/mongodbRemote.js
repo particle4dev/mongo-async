@@ -21,7 +21,7 @@ _.extend(MongodbRemoteDriver.prototype, {
         var ret = {};
         _.each(
             [
-            'find', 'insert', 'update', 'remove'
+            'find', 'insert', 'update', 'remove', 'save'
             //'findOne', 'upsert', '_ensureIndex', '_dropIndex', '_createCappedCollection', 'dropCollection'
             ],
             function (m) {

@@ -18,6 +18,18 @@ _.extend(Collection.prototype, {
   find: function(query){
     var self = this;
     return self._collection.find(query);
+  },
+  remove: function(selector){
+    var self = this;
+    return self._collection.remove(selector);
+  },
+  update: function(selector, mod, options){
+    var self = this;
+    return self._collection.update(selector, mod, options);
+  },
+  save: function(document){
+    var self = this;
+    return self._collection.save(document);
   }
 });
 module.exports = Collection;

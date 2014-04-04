@@ -42,12 +42,6 @@ _.extend(Connection.prototype, {
     var collection = self._db.collection(collectionName);
     return collection.find(query);
   },
-  close: function(){
-    var self = this;
-    if(self._db){
-      self._db.close();
-    }
-  },
   insert: function(collectionName, document){
     var self = this;
     self._ensureConnected();
@@ -101,6 +95,12 @@ _.extend(Connection.prototype, {
     var future = new Future();
     cb(collection, future.resolver());
     return future.wait();
+  },
+  close: function(){
+    var self = this;
+    if(self._db){
+      self._db.close();
+    }
   }
 });
 

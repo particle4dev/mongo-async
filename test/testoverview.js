@@ -1,7 +1,7 @@
 var Fiber = require('fibers');
 var assert = require('assert');
 var qcollection = require('../index');
-
+/**
 suite("basics", function() {
   var blog = new qcollection.Connection('mongodb://localhost:27017/blog');
   var collection = 'test';
@@ -9,6 +9,7 @@ suite("basics", function() {
   qcollection.sequence(function() {
     blog.remove(collection, {});
   });
+
   test("step 1 - insert", function(done) {
     qcollection.sequence(function() {
       blog.insert(collection, {run: run, x: 1});
@@ -19,6 +20,7 @@ suite("basics", function() {
       });
     });
   });
+
   test("step 2 - update", function(done) {
     qcollection.sequence(function() {
       blog.update(collection, {
@@ -32,6 +34,7 @@ suite("basics", function() {
       });
     });
   });
+
   test("step 3 - save", function(done) {
     qcollection.sequence(function() {
       blog.save(collection, {
@@ -45,6 +48,7 @@ suite("basics", function() {
       });
     });
   });
+
   test("step 4 - remove", function(done) {
     qcollection.sequence(function() {
       var n = blog.remove(collection, {
@@ -68,7 +72,6 @@ suite("basics", function() {
   });
 
   test("database error reporting", function(done) {
-
     qcollection.sequence(function() {
       try{
         var n = blog.insert(collection, {
@@ -86,6 +89,7 @@ suite("basics", function() {
       }
       done();
     });
-
   });
+
 });
+*/
