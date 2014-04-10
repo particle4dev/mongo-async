@@ -13,6 +13,7 @@ suite("collection", function() {
   qcollection.sequence(function() {
     testCollection.remove({});
   });
+
   test("step 1 - insert", function(done) {
     qcollection.sequence(function() {
       testCollection.insert({run: run, x: 1});
